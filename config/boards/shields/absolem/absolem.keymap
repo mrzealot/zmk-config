@@ -1,0 +1,78 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
+#include "hungarian.h"
+
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+
+            bindings = <
+                &kp Q    &kp W &kp F &kp P &kp B        			&kp J &kp L &kp U &kp HU_Y &kp HU_AA
+                &kp A    &kp R &kp S &kp T &kp G        			&kp M &kp N &kp E &kp I    &kp O
+                &kp HU_Z &kp X &kp C &kp D &kp V        			&kp K &kp H &sl 1 &sl 2    &kp HU_EE
+                &mt LCTL TAB &lt 3 SPACE &mt LC(LS(LALT)) RET      	&sk LSFT &lt 4 BKSP   &mt LGUI ESC
+            >;
+        };
+
+
+
+        sym_layer {
+
+            bindings = <
+                &kp HU_MORE &kp HU_RCBR &kp HU_RBKT  &kp HU_RPRN  &kp HU_BSLS  	    &kp HU_TILD &kp HU_CIRC &kp HU_PARA &kp HU_EURO &kp HU_AT
+                &kp HU_LESS &kp HU_LCBR &kp HU_LBKT  &kp HU_LPRN  &kp HU_SLSH       &kp HU_PERC &kp HU_ASTR &kp HU_RING &kp HU_COLN &kp HU_SCLN
+                &kp HU_HASH &kp HU_DLR  &kp HU_QST   &kp HU_EXLM  &kp HU_PIPE 	    &kp HU_AMPR &kp HU_EQL  &trans      &kp HU_PLUS &kp HU_GRV
+                                        &kp HU_UNDS  &kp HU_QUOT  &kp HU_DQOT		&kp HU_DOT  &kp HU_COMM &kp HU_MINS
+            >;
+        };
+
+
+    
+        msc_layer {
+
+            bindings = <
+                &trans    &kp HU_UEE &kp HU_UE   &kp HU_UU   &trans         	&trans     &trans      &trans      &trans &trans
+                &kp HU_II &kp HU_OEE &kp HU_OE   &kp HU_OO   &trans             &trans     &trans      &trans      &trans &trans
+                &trans    &trans     &trans      &trans      &trans         	&trans     &trans      &trans      &trans &trans
+                                     &kp HU_UNDS &kp HU_QUOT &kp HU_DQOT		&kp HU_DOT &kp HU_COMM &kp HU_MINS
+            >;
+        };
+
+
+
+        nav_layer {
+
+            bindings = <
+                &kp K_MUTE   &kp K_PREV &kp K_PP  &kp K_NEXT &kp K_VOL_UP  		    &none     &kp PG_UP &kp SPACE &kp PG_DN &kp INS
+                &sk LGUI     &sk LALT   &sk LSFT  &sk LCTL   &kp K_VOL_DN   		&kp K_APP &kp LEFT  &kp UP    &kp RIGHT &kp TAB
+                &kp LC(HU_Z) &kp LC(X)  &kp LC(C) &kp LC(D)  &kp LC(V) 		        &none     &kp HOME  &kp DOWN  &kp END   &kp RET
+                                        &trans    &trans     &trans                 &kp DEL   &kp BKSP  &kp ESC
+            >;
+        };
+
+
+
+        num_layer {
+
+            bindings = <
+                &kp F1    &kp F2    &kp F3    &kp F4          &kp F5  		          &kp HU_MINS &kp HU_7 &kp HU_8 &kp HU_9 &kp BKSP
+                &kp F6    &kp F7    &kp F8    &kp F9          &kp F10   		      &kp HU_0    &kp HU_4 &kp HU_5 &kp HU_6 &kp HU_DOT
+                &kp F11   &kp F12   &kp F13	  &kp PRINTSCREEN &kp PAUSE_BREAK 		  &kp HU_PLUS &kp HU_1 &kp HU_2 &kp HU_3 &kp HU_COMM
+                                    &kp TAB   &kp SPACE       &kp RET 			      &trans 	  &trans   &trans
+            >;
+        };
+
+          
+    };
+};

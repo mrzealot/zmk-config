@@ -14,4 +14,4 @@
 ---
 include:
   - board: nice_nano
-    shield: eek
+    shield: absolem
